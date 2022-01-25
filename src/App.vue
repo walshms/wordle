@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Letter class="letter"></Letter>
+  <Letter class="letter"></Letter>
+  <Letter class="letter"></Letter>
+  <Letter class="letter"></Letter>
+  <Letter class="letter"></Letter>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Letter from './components/Letter.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Letter
+  },
+};
 </script>
 
 <style>
@@ -22,5 +25,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+div.letter{
+  width: 81px;
+  display: inline-block;
 }
 </style>
