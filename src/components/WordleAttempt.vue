@@ -33,6 +33,8 @@
 
 <script>
 import Letter from "./Letter.vue";
+import filterWords from "@/common.ts";
+
 export default {
   components: { Letter },
   props: ["wordList"],
@@ -47,13 +49,23 @@ export default {
   methods: {
     evaluateIfPossible: function (event) {
       this.letters[event.id] = { color: event.color, letter: event.letter };
+      if (this.canEvaluate()) {
+        console.log("evaluating " + this.wordList.length);
+        const filteredWords = filterWords(this.wordList, this.letters);
+        console.log("filtered " + filteredWords.length);
+        // 1) show filtered words
+        // 2) set this to disabled
+        // 
+      }
+    },
+    canEvaluate: function () {
       for (let i = 0; i < this.letters.length; i++) {
         let element = this.letters[i];
         if (element && (!element.color || !element.letter)) {
-          return;
+          return false;
         }
       }
-      console.log("EVALUATE!" + this.wordList.length);
+      return true;
     },
   },
 };

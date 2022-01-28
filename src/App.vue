@@ -1,6 +1,9 @@
 <template>
-  <WordleAttempt v-for="(attempt, index) in attempts" :key="index" :wordList="attempt.wordList">
-  </WordleAttempt>
+  <WordleAttempt
+    v-for="(attempt, index) in attempts"
+    :key="index"
+    :wordList="attempt.wordList"
+  />
 </template>
 
 <script>
