@@ -1,7 +1,13 @@
 <template>
   <div>
     <div>
-      <input type="text" maxlength="1" v-bind:style="getColor" />
+      <input
+        type="text"
+        maxlength="1"
+        v-bind:style="getColor"
+        v-model="selectedLetter"
+        v-on:keyup="valuesUpdated"
+      />
     </div>
     <div>
       <ColorSelector
@@ -22,14 +28,27 @@
 
 <script>
 import ColorSelector from "./ColorSelector.vue";
+
 export default {
   components: { ColorSelector },
+  props: ["id"],
   data: function () {
-    return { selectedColor: "" };
+    return {
+      selectedColor: "",
+      selectedLetter: "",
+    };
   },
   methods: {
     setColor: function (color) {
       this.selectedColor = color;
+      this.valuesUpdated();
+    },
+    valuesUpdated: function () {
+      this.$emit("values-updated", {
+        id: this.id,
+        color: this.selectedColor,
+        letter: this.selectedLetter,
+      });
     },
   },
   computed: {

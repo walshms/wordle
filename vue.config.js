@@ -1,3 +1,6 @@
 module.exports = {
-    publicPath: '/wordle/'
+    publicPath: '/wordle/',
+    configureWebpack: {
+        devtool: 'source-map'
+    }
 }
