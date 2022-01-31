@@ -24,8 +24,9 @@ export default {
 .selectorBox {
   width: 12px;
   height: 12px;
-  margin: 3px;
+  margin: 1px;
   display: inline-block;
   cursor: pointer;
+  border: 1px solid gray;
 }
 </style>

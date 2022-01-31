@@ -70,11 +70,7 @@ export default {
 input {
   width: 1em;
   font-size: 42px;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
-  background-color: #eee;
+  border: 1px solid gray;
   color: black;
   text-align: center;
   text-transform: uppercase;
