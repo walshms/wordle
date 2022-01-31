@@ -69,12 +69,13 @@ export default {
 <style>
 input {
   width: 1em;
-  font-size: 69px;
+  font-size: 42px;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
   background-color: #eee;
+  color: black;
   text-align: center;
   text-transform: uppercase;
 }

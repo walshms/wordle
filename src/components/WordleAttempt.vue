@@ -94,7 +94,7 @@ export default {
 
 <style>
 div.letter {
-  width: 81px;
+  width: 60px;
   display: inline-block;
 }
 .filteredWordContainer {
