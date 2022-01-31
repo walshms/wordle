@@ -31,7 +31,12 @@ import ColorSelector from "./ColorSelector.vue";
 
 export default {
   components: { ColorSelector },
-  props: ["id"],
+  props: ["id", "init"],
+  mounted: function () {
+    if (this.init) {
+      this.selectedLetter = this.init;
+    }
+  },
   data: function () {
     return {
       selectedColor: "",

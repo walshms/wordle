@@ -17,7 +17,7 @@ function greenFilter(word: string, guessedLetters: GuessedLetter[]): boolean {
         if (letter.color === "yellow" && (letter.letter === word.charAt(i) || word.indexOf(letter.letter) === -1)) {
             return false;
         }
-        if (letter.color === "black" && candidateContainsLetter(word, guessedLetters, i)) {
+        if (letter.color === "grey" && candidateContainsLetter(word, guessedLetters, i)) {
             return false;
         }
     }

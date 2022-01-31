@@ -3,6 +3,8 @@
     v-for="(attempt, index) in attempts"
     :key="index"
     :wordList="attempt.wordList"
+    :preselectedWord="attempt.preselectedWord"
+    v-on:word-selected="createNewAttempt"
   />
 </template>
 
@@ -24,6 +26,11 @@ export default {
   name: "App",
   components: {
     WordleAttempt,
+  },
+  methods: {
+    createNewAttempt: function (event) {
+      this.attempts.push({ preselectedWord: event.word, wordList: event.wordList });
+    },
   },
 };
 </script>

@@ -1,5 +1,5 @@
 const common = require('./common');
-const wordList = ['TRACK', 'CRACK', 'METER', 'OCEAN', 'CRABS', 'SAVOR', 'MEATS', 'AGONE'];
+const wordList = ['TRACK', 'CRACK', 'METER', 'OCEAN', 'CRABS', 'SAVOR', 'MEATS', 'AGONE', 'BASIC'];
 /*
 
         _00("TRACK", "BGGGG", "CRACK", true),
@@ -41,6 +41,11 @@ const wordList = ['TRACK', 'CRACK', 'METER', 'OCEAN', 'CRABS', 'SAVOR', 'MEATS',
         guessedLetters: testScenario('OCEAN', "YBBBY"),
         wordToTest: 'AGONE',
         isIncluded: false
+    },
+    {
+        guessedLetters: testScenario('ARISE', "BBYBB"),
+        wordToTest: 'BASIC',
+        isIncluded: false
     }
 ].forEach((testArgs, i) => {
     test('run tests ' + i, () => {
@@ -63,6 +68,6 @@ function getColor(letter) {
     } else if (letter === 'Y') {
         return 'yellow';
     } else {
-        return 'black';
+        return 'grey';
     }
 }
