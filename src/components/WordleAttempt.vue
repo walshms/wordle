@@ -100,7 +100,7 @@ div.letter {
 .filteredWordContainer {
   height: 210px;
   overflow-y: auto;
-  border: 1px solid grey;
+  background-color: #eee
 }
 .filteredWord {
   display: inline-block;
@@ -109,5 +109,6 @@ div.letter {
   margin-top: 1px;
   cursor: pointer;
   color: blue;
+  text-decoration: underline;
 }
 </style>
