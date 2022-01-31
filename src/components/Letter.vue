@@ -47,7 +47,7 @@ export default {
       this.$emit("values-updated", {
         id: this.id,
         color: this.selectedColor,
-        letter: this.selectedLetter,
+        letter: this.selectedLetter.toUpperCase(),
       });
     },
   },
@@ -71,5 +71,6 @@ input {
   border-bottom-style: groove;
   background-color: #eee;
   text-align: center;
+  text-transform: uppercase;
 }
 </style>

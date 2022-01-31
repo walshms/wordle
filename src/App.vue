@@ -8,7 +8,7 @@
 
 <script>
 import WordleAttempt from "./components/WordleAttempt.vue";
-import initialWordList from "@/words.js";
+import initialWordList from "@/words.ts";
 
 export default {
   mounted: function () {
@@ -36,9 +36,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-div.letter {
-  width: 81px;
-  display: inline-block;
 }
 </style>
