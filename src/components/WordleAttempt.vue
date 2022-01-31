@@ -40,6 +40,7 @@
         {{ word }}
       </div>
     </div>
+    <div v-show="showCongratulations">Congratulations cheater!</div>
   </div>
 </template>
 
@@ -55,6 +56,7 @@ export default {
       guessedLetters: new Array(5),
       filteredWords: [],
       showFilteredWords: false,
+      showCongratulations: false,
       disabled: false
     };
   },
@@ -66,7 +68,12 @@ export default {
       };
       if (this.canEvaluate()) {
         this.filteredWords = filterWords(this.wordList, this.guessedLetters);
-        this.showFilteredWords = true;
+        if(this.filteredWords.length === 1){
+          this.showCongratulations = true;
+        } else {
+          this.showFilteredWords = true;
+          this.showCongratulations = false;
+        }
       }
     },
     canEvaluate: function () {
