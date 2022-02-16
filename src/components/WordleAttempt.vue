@@ -69,6 +69,7 @@ export default {
       if (this.canEvaluate()) {
         this.filteredWords = filterWords(this.wordList, this.guessedLetters);
         if(this.filteredWords.length === 1){
+          this.showFilteredWords = true;
           this.showCongratulations = true;
         } else {
           this.showFilteredWords = true;
